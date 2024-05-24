@@ -2,6 +2,29 @@
   <span>{{ title }}</span>
 </mat-toolbar>
 
+<!-- <div>
+  <input type="text" #todoText placeholder="Add Todo">
+  <button (click)="addTask(todoText.value)">Add</button>
+</div> -->
+
+
+<div class="container">
+  <h1>Interactive Task Manager App</h1>
+  <hr>
+  <form class="todo-form" #f="ngForm" (ngSubmit)="onSubmit(f)">
+    
+  </form>
+
+
+ 
+
+  <hr>
+  <br>
+
+  <h1 id="completed-tasks">Completed Tasks</h1>
+  <hr>
+  
+</div>
 
 
 
