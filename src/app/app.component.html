@@ -44,13 +44,25 @@
   </ul>
   
 
-
-
+  <div *ngIf="!todos?.length" class="msg">
+    Your Todo List is Empty!
+  </div>
 
   <hr>
   <br>
 
   <h1 id="completed-tasks">Completed Tasks</h1>
   <hr>
+
+  <ul class="todo-list" *ngFor="let todo of todos">
+    <li *ngIf="this.todo.isComplete">
+      <div>
+        <div>{{this.todo.title}}</div>
+        <div>
+          <button (click)="onDelete(this.todo.id)" class="btn-floating waves-effect waves-light red"><i class="material-icons">delete</i></button>
+        </div>
+      </div>
+    </li>
+  </ul>
 
 </div>
